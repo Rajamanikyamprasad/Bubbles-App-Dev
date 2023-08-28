@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+  }
+  .container {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    width: 1100px;
+    margin: auto;
+    border: solid;
+  }
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+    margin-top: 30px;
+  } 
+  .red { background-color: red; }
+  .green { background-color: green; }
+  .blue { background-color: blue; }
+  .purple { background-color: purple; }
+  .arrow {
+
+    font-size: 70px;
+    margin-left: 1000px;
+    font-weight: bold;
+
+  }
+
+  #resetButton
+  {
+    height: 30px;
+    width: 200px;
+    margin-left: 900px ;
+    background-color: black;
+    color: white;
+    font-size: 21px;
+  }
+</style>
+<title>Bubbles App Dev</title>
+</head>
+<body>
+  <h1 style="margin-left: 550px;">Bubbles App</h1>
+<div class="container">
+  <div class="circle red " id="red" onclick="circle1()"> <span class="arrow move1" > &#8592;</span> </div>
+  <div class="circle green" id="green" onclick="circle2()"> <span class="arrow move2">    &#8592;</span> </div>
+  <div class="circle blue" id="blue" onclick="circle3()">  <span class="arrow move3">    &#8592;</span> </div>
+  <div class="circle purple" id="purple" onclick="circle4()"> <span class="arrow move4">    &#8592;</span> </div>
+</div>
+<br>
+<div>
+<button id="resetButton" onclick="reset()">Reset</button>
+</div>
+
+<script>
+  
+  function  circle1() {
+
+    let move=document.querySelector('.move1')
+    let colour=event.target.id
+    move.style.color='red'
+    move.style.margin="80px"
+
+  }
+    function  circle2(e) {
+
+    let move=document.querySelector('.move2')
+    let colour=event.target.id
+    move.style.color='green'
+    move.style.margin="80px"
+
+  }
+    function  circle3() {
+
+    let move=document.querySelector('.move3')
+    let colour=event.target.id
+    move.style.color='blue'
+    move.style.margin="80px"
+
+  }  function  circle4() {
+
+    let move=document.querySelector('.move4')
+    let colour=event.target.id
+    move.style.color='purple'
+    move.style.margin="80px"
+
+  }
+
+  function reset(){
+    let res1=document.querySelector('.move1')
+    res1.style.color='black'
+    res1.style.margin="1000px"
+    let res2=document.querySelector('.move2')
+    res2.style.color='black'
+    res2.style.margin="1000px"
+let res3=document.querySelector('.move3')
+    res3.style.color='black'
+    res3.style.margin="1000px"
+let res4=document.querySelector('.move4')
+    res4.style.color='black'
+    res4.style.margin="1000px"
+
+
+
+  }
+</script>
+</body>
+</html>
